@@ -27,7 +27,7 @@ export function App() {
             <TextInput.Icon>
               <Envelope />
             </TextInput.Icon>
-            <TextInput.Input placeholder="digite seu email" />
+            <TextInput.Input type="email" placeholder="digite seu email" />
           </TextInput.Root>
         </div>
         <div>

@@ -6,8 +6,4 @@ export default {
   component: CheckBox,
 } as Meta<CheckBoxProps>;
 
-export const Default: StoryObj<CheckBoxProps> = {
-  args: {
-    onValueChange: console.log,
-  },
-};
+export const Default: StoryObj<CheckBoxProps> = {};

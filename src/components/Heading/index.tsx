@@ -6,16 +6,26 @@ export type HeadingProps = {
   asChild?: boolean;
   children: ReactNode;
   size?: "sm" | "md" | "lg";
+  className?: string;
 };
 
-export function Heading({ size = "md", asChild, children }: HeadingProps) {
+export function Heading({
+  size = "md",
+  asChild,
+  className,
+  children,
+}: HeadingProps) {
   const Component = asChild ? Slot : "h2";
 
-  const textClasses = clsx("text-gray-100 font-bold", {
-    "text-lg": size === "sm",
-    "text-xl": size === "md",
-    "text-2xl": size === "lg",
-  });
+  const textClasses = clsx(
+    "text-gray-100 font-bold",
+    {
+      "text-lg": size === "sm",
+      "text-xl": size === "md",
+      "text-2xl": size === "lg",
+    },
+    className
+  );
 
   return <Component className={textClasses}>{children}</Component>;
 }

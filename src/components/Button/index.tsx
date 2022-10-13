@@ -11,7 +11,7 @@ export type ButtonProps = {
 
 export function Button({
   asChild,
-  size,
+  size = "md",
   full,
   children,
   ...props
